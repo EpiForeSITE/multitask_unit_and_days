@@ -5,7 +5,7 @@ import pickle
 import seaborn as sn
 
 import tensorflow as tf
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+import tensorflow.keras.preprocessing.sequence
 from tensorflow.keras.layers import Embedding, LSTM, GRU, Dense, Bidirectional, Dropout, LayerNormalization
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.models import Sequential
@@ -14,6 +14,7 @@ from tensorflow.keras.optimizers import Adam
 from keras.models import Model
 from keras.layers import Input
 from keras.layers import Concatenate
+
 from keras.utils import to_categorical
 from keras.utils import plot_model
 
