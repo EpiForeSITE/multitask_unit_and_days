@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "multitask-unit-and-days"
+version = "0.1.0"
+description = "Multitask Unit and Days"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tensorflow = "^2.17.0"
+numpy = "^2.0.1"
+pandas = "^2.2.2"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+keras = "^3.5.0"
+sklearn = "^0.0.post12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
