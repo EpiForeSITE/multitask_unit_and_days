@@ -8,7 +8,7 @@ from multitask_unit_and_days.data import *
 
 # TODO:  pyproject.toml - poetry
 # TODO: Sphinx documentation
-# TODO: look mermaid
+# TODO: look mermaid   https://mermaid-js.github.io/mermaid/#/flowchart
 
 
 
