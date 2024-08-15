@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "multitask-unit-and-days"
+name = "multitask_unit_and_days"
 version = "0.1.0"
 description = "Multitask Unit and Days"
 authors = ["Your Name <you@example.com>"]
