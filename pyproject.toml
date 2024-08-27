@@ -6,11 +6,11 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 packages = [
-    {include = "code"},
+    {include = "multitask_unit_and_days", from="src"},
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3"
 tensorflow = "^2.17.0"
 numpy = "^1.0.1"
 pandas = "^2"
