@@ -5,9 +5,7 @@ description = "Multitask Unit and Days"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 packages = [
-
-    {include = "multitask_unit_and_days", from="src"},
-
+    {include = "multitask_unit_and_days"},
 ]
 
 
