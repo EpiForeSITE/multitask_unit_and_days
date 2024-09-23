@@ -26,4 +26,17 @@ The starting point of the code is main.py. It takes the user input and then goes
 
 Since there are two different types of tasks, our evaluation metrics are set accordingly. Prediction of next unit label is a classification task, our evaluation metrics for this task are accuracy and top-k accuracy (k=2). Prediction of remaining length of stay is a regression task, our evaluation metrics in this case is mean absolute error, mean squared error and root mean squared error. The MAE and Top-k accuracy values are plotted and saved in the image folder to show the model performance on test data. The history of the training time is saved in the hist_log folder.
 
+### Running in Podman
+- Run a container using the `docker.io/library/python:3.12` image
+- By default, the image doesn't have access to a few supporting tools needed to install the package. One of these, h5py must be installed before installing the package. Run these commands in the container Terminal:
+  ```
+  apt update
+  apt-get install libhdf5-dev
+  ```
+- Then install the package using `pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask_unit_and_days`
+  - To install package from a specific branch use `pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask_unit_and_days@<branch_name>`
+    - For example, to install the package version from branch `make-package-v2.0` use: `pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask_unit_and_days@make-package-v2.0`
+- The next tool needed is `distutils`, which is not imported automatically. Import this in the container's Python Tty environment using `import setuptools.dist`
+- Finally, the package can be imported using `import multitask_unit_and_days`
+
 
