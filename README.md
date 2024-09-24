@@ -37,13 +37,5 @@ To install from a specific branch, append `@<branch_name>` to the URL, for examp
 ```
 pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask_unit_and_days@make-package
 ```
-The next tool needed is `distutils`, which is not imported automatically. Import this in the container's Python Tty environment using 
-```
-import setuptools.dist
-```
-Finally, the package can be imported using 
-```
-import multitask_unit_and_days
-```
 
 
