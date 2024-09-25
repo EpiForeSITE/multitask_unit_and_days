@@ -39,9 +39,9 @@ pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask
 ```
 
 ### Troubleshooting
-If installation fails with the error: `ERROR: Failed building wheel for h5py`, install the HDF5 library using
+It appears that Python >=3.12 does not automatically include the HDF5 library, which is necessary to build `h5py` (one of this package's dependencies). If you're running Python 3.12 or greater, you may see the error message `ERROR: Failed building wheel for h5py` during `pip` installation. If so, you will need to first install the HDF5 library using
 ```
 apt update
 apt-get install libhdf5-dev
 ```
-Then install the package again with `pip`
+After you have HDF5 installed, you should be able to install package with `pip`
