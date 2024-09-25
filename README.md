@@ -27,7 +27,7 @@ The starting point of the code is main.py. It takes the user input and then goes
 Since there are two different types of tasks, our evaluation metrics are set accordingly. Prediction of next unit label is a classification task, our evaluation metrics for this task are accuracy and top-k accuracy (k=2). Prediction of remaining length of stay is a regression task, our evaluation metrics in this case is mean absolute error, mean squared error and root mean squared error. The MAE and Top-k accuracy values are plotted and saved in the image folder to show the model performance on test data. The history of the training time is saved in the hist_log folder.
 
 ## Installing the Package
-If using Podman, see documentation on containers in [`EpiForeSITE/software`](https://github.com/EpiForeSITE/software) repo for details on how to run a container with Python installed. Don't forget to install `h5py`, if necessary.
+If using Podman, see documentation on containers in [`EpiForeSITE/software`](https://github.com/EpiForeSITE/software) repo for details on how to run a container with Python installed.
 
 Install the package using
 ```
@@ -38,4 +38,10 @@ To install from a specific branch, append `@<branch_name>` to the URL, for examp
 pip install multitask_unit_and_days@git+https://github.com/EpiForeSITE/multitask_unit_and_days@make-package
 ```
 
-
+### Troubleshooting
+If installation fails with the error: `ERROR: Failed building wheel for h5py`, install the HDF5 library using
+```
+apt update
+apt-get install libhdf5-dev
+```
+Then install the package again with `pip`
