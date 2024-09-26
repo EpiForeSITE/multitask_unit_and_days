@@ -7,3 +7,4 @@
 .Python
 build/
 dist/
+.whl
